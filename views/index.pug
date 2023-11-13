@@ -1,0 +1,22 @@
+doctype html
+
+html(lang='en')
+    head
+        style
+            include styles.css
+    body
+        table
+            tr
+                th 
+                th Delegator
+                th.data Amount
+            each u, i in unbondings
+                tr
+                    th= i
+                    td= u.address
+                    td.data= u.amount + ' DSM'
+
+            tr.total
+                td 
+                td Total
+                td.data.amount= total + ' DSM'

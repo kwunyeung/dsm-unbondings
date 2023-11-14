@@ -3,8 +3,14 @@
       "target": "es6",
       "module": "commonjs",
       "rootDir": "./",
-      "outDir": "./build",
+      "outDir": "./dist",
       "esModuleInterop": true,
-      "strict": true
+      "strict": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "baseUrl": ".",
+      "paths": {
+          "*": ["node_modules/*", "src/types/*"]
+      }
     }
   }

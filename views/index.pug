@@ -6,6 +6,10 @@ html(lang='en')
             include styles.css
     body
         table
+            tr.total
+                td 
+                td Total Unbonding
+                td.data.amount= totalUnbonding + ' DSM'
             tr
                 th 
                 th Delegator
@@ -15,8 +19,3 @@ html(lang='en')
                     th= i
                     td= u.address
                     td.data= u.amount + ' DSM'
-
-            tr.total
-                td 
-                td Total
-                td.data.amount= total + ' DSM'

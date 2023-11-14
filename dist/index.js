@@ -11,7 +11,10 @@ const path_1 = __importDefault(require("path"));
 // Initialize the express engine
 const app = (0, express_1.default)();
 app.set('view engine', 'pug');
-app.set('views', path_1.default.join(__dirname, 'views'));
+if (process.env.NODE_ENV == 'production')
+    app.set('views', path_1.default.join(__dirname, '../views'));
+else
+    app.set('views', path_1.default.join(__dirname, './views'));
 // Take a port 3000 for running server.
 const port = 3000;
 // Handling '/' Request

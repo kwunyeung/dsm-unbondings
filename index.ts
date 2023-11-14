@@ -8,8 +8,11 @@ import path from 'path';
 // Initialize the express engine
 const app: express.Application = express();
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
- 
+if (process.env.NODE_ENV == 'production')
+    app.set('views', path.join(__dirname, '../views'));
+else
+    app.set('views', path.join(__dirname, './views'));
+
 // Take a port 3000 for running server.
 const port: number = 3000;
 

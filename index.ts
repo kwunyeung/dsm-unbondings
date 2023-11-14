@@ -3,11 +3,12 @@
 import express from 'express';
 import https from 'https';
 import numeral from 'numeral';
+import path from 'path';
 
 // Initialize the express engine
 const app: express.Application = express();
 app.set('view engine', 'pug');
-app.set('views', 'views');
+app.set('views', path.join(__dirname, 'views'));
  
 // Take a port 3000 for running server.
 const port: number = 3000;

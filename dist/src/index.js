@@ -10,7 +10,7 @@ const numeral_1 = __importDefault(require("numeral"));
 // Initialize the express engine
 const app = (0, express_1.default)();
 app.set('view engine', 'pug');
-app.set('views', '../views');
+app.set('views', 'views');
 // Take a port 3000 for running server.
 const port = 3000;
 // Handling '/' Request
